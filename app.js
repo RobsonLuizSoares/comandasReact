@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 3001
 
 const MONGO_URI = 'mongodb+srv://robson:lya250916@comandasreact-oatun.mongodb.net/test?retryWrites=true&w=majority'
 
-const options = { reconnectTries: Number.MAX_VALUE, reconnectInterval: 500, poolSize: 5, useNewUrlParser: true }
+//const options = { reconnectTries: Number.MAX_VALUE, reconnectInterval: 500, poolSize: 5, useNewUrlParser: true }
 
-mongoose.connect(MONGO_URI, options).then(() => { 
+mongoose.connect(MONGO_URI, { useNewUrlParser: true }).then(() => { 
   createInitialUser() 
 })
 
