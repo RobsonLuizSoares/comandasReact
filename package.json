@@ -1,0 +1,18 @@
+{
+  "name": "comandas_react",
+  "version": "1.0.0",
+  "description": "Sistema de Gerenciamento de Comandas em ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Robson Luiz Soares da Conceição",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.1"
+  }
+}
