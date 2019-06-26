@@ -3,6 +3,8 @@ const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const User = require('./models/users')
+const cors = require('cors')
+const path = require('path')
 
 const PORT = process.env.PORT || 3001
 
@@ -25,10 +27,12 @@ mongoose.connection.on('connected', () => {
 mongoose.connection.on('disconnected', () => {
   console.log('Aplicação desconectada do banco de dados')
 } )
-
+//Cors
+app.use(cors())
 //Body Parser
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+app.use(express.static(path.resolve(__dirname, 'public')))
 
 // Routes
 const indexRoute = require('./routes/index')
