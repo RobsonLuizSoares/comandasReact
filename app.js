@@ -8,11 +8,11 @@ const path = require('path')
 
 const PORT = process.env.PORT || 3001
 
-const url = 'mongodb+srv://robson:lya250916@comandasreact-oatun.mongodb.net/test?retryWrites=true&w=majority'
+const MONGO_URI = 'mongodb+srv://robson:lya250916@comandasreact-oatun.mongodb.net/test?retryWrites=true&w=majority'
 
 const options = { reconnectTries: Number.MAX_VALUE, reconnectInterval: 500, poolSize: 5, useNewUrlParser: true }
 
-mongoose.connect(url, options).then(() => { 
+mongoose.connect(MONGO_URI, options).then(() => { 
   createInitialUser() 
 })
 
