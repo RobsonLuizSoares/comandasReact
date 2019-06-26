@@ -2,9 +2,9 @@
   "name": "comandas_react",
   "version": "1.0.0",
   "description": "Sistema de Gerenciamento de Comandas em ReactJS",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
